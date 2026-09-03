@@ -1,36 +1,20 @@
-// Datos del carrusel - Personalizables según necesidad
+// Datos del carrusel - 2 diapositivas
 const carouselData = [
     {
         id: 1,
-        image: 'https://images.unsplash.com/photo-1500595046891-05dff5fc49e9?w=1200&h=675&fit=crop',
-        title: 'Gestión Agropecuaria Inteligente',
-        description: 'Simplifica tu vida con nuestro software de gestión especializado para el sector agropecuario.',
-        buttonText: 'Solicitar Demo',
-        link: 'https://synagroweb.com'
+        image: './Placa Webinar Cuentas Corrientes de Proveedores - SYNAGRO 7.png',
+        title: 'Webinar Cuentas Corrientes',
+        description: 'Únete a nuestro webinar sobre gestión de cuentas corrientes de proveedores.',
+        buttonText: 'Registrarse',
+        link: 'https://forms.gle/UQmz6VUtQrwQKcjd9'
     },
     {
         id: 2,
-        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=675&fit=crop',
-        title: 'Información en Tiempo Real',
-        description: 'Accede a toda la información técnica, económica y administrativa desde cualquier dispositivo.',
-        buttonText: 'Explorar Módulos',
-        link: '#'
-    },
-    {
-        id: 3,
-        image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=675&fit=crop',
-        title: 'Aplicación Móvil',
-        description: 'Consulta y opera funciones directamente desde tu teléfono, facilitando el trabajo en el campo.',
-        buttonText: 'Conocer App',
-        link: '#'
-    },
-    {
-        id: 4,
-        image: 'https://images.unsplash.com/photo-1516534775068-bb4e6b6b7d8a?w=1200&h=675&fit=crop',
-        title: 'Soporte Especializado',
-        description: 'Equipo profesional disponible para ayudarte en cada paso de tu camino con Synagro.',
-        buttonText: 'Contactar Soporte',
-        link: '#'
+        image: './Mobile Pop Up - Synagro 7.png',
+        title: 'Funcionalidades APP Mobile',
+        description: 'Descubre todas las funcionalidades de nuestra aplicación móvil.',
+        buttonText: 'Conocer Más',
+        link: './Funcionalidades APP MOBILE.png'
     }
 ];
 
