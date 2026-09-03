@@ -1,0 +1,15 @@
+<svg width="280" height="80" viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Leaf icon -->
+  <g id="leaf" transform="translate(15, 15)">
+    <!-- Leaf outline -->
+    <path d="M 25 10 Q 35 5, 40 20 Q 35 40, 25 45 Q 20 40, 20 20 Z" fill="#6BA539" stroke="#6BA539" stroke-width="0.5"/>
+    <!-- Leaf vein -->
+    <path d="M 25 10 Q 28 20, 25 45" stroke="#E8F0DC" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- Text: syn (blue) -->
+  <text x="70" y="60" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="bold" fill="#003D5C">syn</text>
+
+  <!-- Text: agro (green) -->
+  <text x="180" y="60" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="bold" fill="#6BA539">agro</text>
+</svg>

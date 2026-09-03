@@ -1,0 +1,36 @@
+{
+  "slides": [
+    {
+      "id": 1,
+      "image": "https://images.unsplash.com/photo-1516534775068-bb4e6b6b7d8a?w=1200&h=675&fit=crop",
+      "title": "Bienvenido a Novedades",
+      "description": "Descubre las últimas actualizaciones y mejoras de nuestros servicios.",
+      "buttonText": "Conocer más",
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=675&fit=crop",
+      "title": "Innovación Tecnológica",
+      "description": "Utilizamos las tecnologías más avanzadas para ofrecerte la mejor experiencia.",
+      "buttonText": "Explorar",
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=675&fit=crop",
+      "title": "Nuestro Equipo",
+      "description": "Un equipo profesional dedicado a tu éxito y satisfacción.",
+      "buttonText": "Conocer al equipo",
+      "link": "#"
+    },
+    {
+      "id": 4,
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=675&fit=crop",
+      "title": "Soluciones Personalizadas",
+      "description": "Adaptamos nuestros servicios a tus necesidades específicas.",
+      "buttonText": "Solicitar cotización",
+      "link": "#"
+    }
+  ]
+}
