@@ -59,9 +59,11 @@ body {
 }
 
 .carousel-container {
-    margin-top: 0;
+    margin: 0 !important;
+    margin-top: 0 !important;
     width: 100%;
-    padding: 0;
+    padding: 0 !important;
+    padding-top: 0 !important;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -78,8 +80,9 @@ body {
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    margin: 0 auto;
-    padding: 0;
+    margin: 0 auto !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
 }
 
 .carousel-slides {
