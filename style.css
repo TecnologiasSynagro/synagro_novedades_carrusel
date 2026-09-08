@@ -64,7 +64,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background: linear-gradient(135deg, var(--synagro-blue) 0%, var(--synagro-dark-blue) 100%);
     min-height: 100vh;
