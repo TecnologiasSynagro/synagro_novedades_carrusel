@@ -29,6 +29,7 @@ const carouselData = [
 // Variables globales
 let currentSlide = 0;
 const slides = carouselData;
+let isAutoPlayPaused = false;
 
 // Inicializar el carrusel
 function initCarousel() {
@@ -150,6 +151,7 @@ function navigateToLink(link) {
 function attachEventListeners() {
     document.getElementById('nextBtn').addEventListener('click', nextSlide);
     document.getElementById('prevBtn').addEventListener('click', prevSlide);
+    document.getElementById('pauseBtn').addEventListener('click', togglePause);
 
     // Navegación por teclado
     document.addEventListener('keydown', (e) => {
@@ -159,7 +161,22 @@ function attachEventListeners() {
 
     // Pausar autoplay al interactuar con el mouse
     document.querySelector('.carousel').addEventListener('mouseenter', stopAutoPlay);
-    document.querySelector('.carousel').addEventListener('mouseleave', startAutoPlay);
+    document.querySelector('.carousel').addEventListener('mouseleave', () => {
+        if (!isAutoPlayPaused) startAutoPlay();
+    });
+}
+
+// Toggle pause
+function togglePause() {
+    const pauseBtn = document.getElementById('pauseBtn');
+    isAutoPlayPaused = !isAutoPlayPaused;
+    if (isAutoPlayPaused) {
+        clearInterval(autoPlayInterval);
+        pauseBtn.querySelector('span').textContent = '▶';
+    } else {
+        startAutoPlay();
+        pauseBtn.querySelector('span').textContent = '⏸';
+    }
 }
 
 // Auto-play
