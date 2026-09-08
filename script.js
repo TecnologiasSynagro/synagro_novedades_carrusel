@@ -1,20 +1,28 @@
-// Datos del carrusel - 2 diapositivas
+// Datos del carrusel - 3 diapositivas
 const carouselData = [
     {
         id: 1,
-        image: './Placa Webinar Cuentas Corrientes de Proveedores - SYNAGRO 7.png',
-        title: 'Webinar Cuentas Corrientes',
-        description: 'Únete a nuestro webinar sobre gestión de cuentas corrientes de proveedores.',
-        buttonText: 'Registrarse',
-        link: 'https://forms.gle/UQmz6VUtQrwQKcjd9'
+        image: './Placa Actualización SYNAGRO 7-108 - SYNAGRO 7.png',
+        title: 'Actualización SYNAGRO 7-108',
+        description: 'Descubre las nuevas funcionalidades de SYNAGRO 7.108',
+        buttonText: 'Conocer más',
+        link: './Update SYNagro 7.108.pdf'
     },
     {
         id: 2,
-        image: './Mobile Pop Up - Synagro 7.png',
-        title: 'Funcionalidades APP Mobile',
-        description: 'Descubre todas las funcionalidades de nuestra aplicación móvil.',
-        buttonText: 'Conocer Más',
-        link: './Funcionalidades APP MOBILE.png'
+        image: './Placa Pop Up syn7 - Webinar Mobile.png',
+        title: 'Webinar Mobile',
+        description: 'Únete a nuestro webinar sobre funcionalidades mobile.',
+        buttonText: 'Inscribirse',
+        link: 'https://forms.gle/cR9C5xJ4EyYnYKYX9'
+    },
+    {
+        id: 3,
+        image: './Inconveniente Técnico - SYNAGRO 7.png',
+        title: 'Inconveniente Técnico',
+        description: 'Estamos trabajando para resolver los inconvenientes técnicos.',
+        buttonText: '',
+        link: ''
     }
 ];
 
@@ -39,10 +47,11 @@ function createSlides() {
     slides.forEach((slide, index) => {
         const slideElement = document.createElement('div');
         slideElement.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
+        const buttonHTML = slide.buttonText ? `<button class="carousel-slide-button" onclick="navigateToLink('${slide.link}')">${slide.buttonText}</button>` : '';
         slideElement.innerHTML = `
             <img src="${slide.image}" alt="${slide.title}" loading="lazy">
             <div class="carousel-slide-overlay">
-                <button class="carousel-slide-button" onclick="navigateToLink('${slide.link}')">${slide.buttonText}</button>
+                ${buttonHTML}
             </div>
         `;
         slidesContainer.appendChild(slideElement);
@@ -90,11 +99,16 @@ function updateCarousel() {
     document.getElementById('slideDescription').textContent = currentData.description;
 
     const slideLink = document.getElementById('slideLink');
-    slideLink.textContent = currentData.buttonText;
-    slideLink.onclick = (e) => {
-        e.preventDefault();
-        navigateToLink(currentData.link);
-    };
+    if (currentData.buttonText) {
+        slideLink.textContent = currentData.buttonText;
+        slideLink.style.display = 'inline-block';
+        slideLink.onclick = (e) => {
+            e.preventDefault();
+            navigateToLink(currentData.link);
+        };
+    } else {
+        slideLink.style.display = 'none';
+    }
 }
 
 // Ir a una diapositiva específica
@@ -122,6 +136,9 @@ function prevSlide() {
 function navigateToLink(link) {
     if (link.startsWith('http')) {
         // Link externo
+        window.open(link, '_blank');
+    } else if (link.includes('.pdf')) {
+        // Abrir PDF en nueva pestaña
         window.open(link, '_blank');
     } else if (link.startsWith('/') || link.includes('.')) {
         // Ruta interna del repositorio
