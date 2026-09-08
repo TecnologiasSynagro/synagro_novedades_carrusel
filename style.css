@@ -4,10 +4,18 @@
     box-sizing: border-box;
 }
 
+html {
+    background: linear-gradient(135deg, var(--synagro-blue) 0%, var(--synagro-dark-blue) 100%);
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background: linear-gradient(135deg, var(--synagro-blue) 0%, var(--synagro-dark-blue) 100%);
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
