@@ -125,13 +125,13 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.05);
-    display: none;
+    background: transparent;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-end;
+    justify-content: flex-end;
     padding: 20px;
-    z-index: 2;
+    z-index: 15;
 }
 
 .carousel-slide-button {
@@ -146,9 +146,7 @@ body {
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
-    margin-top: 150px;
-    margin-right: 90px;
-    margin-bottom: 20px;
+    margin: 0 20px 20px 0;
 }
 
 .carousel-slide-button:hover {
@@ -164,9 +162,9 @@ body {
 /* Botones de navegación */
 .carousel-button {
     position: absolute;
-    bottom: 20px;
-    transform: none;
-    background-color: rgba(255, 255, 255, 0.9);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.85);
     color: var(--synagro-blue);
     border: none;
     font-size: 28px;
@@ -186,7 +184,7 @@ body {
 }
 
 .carousel-button:active {
-    transform: scale(0.95);
+    transform: translateY(-50%) scale(0.95);
 }
 
 .carousel-button-prev {
