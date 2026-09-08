@@ -164,7 +164,7 @@ body {
 /* Botones de navegación */
 .carousel-button {
     position: absolute;
-    bottom: 15px;
+    bottom: 5px;
     transform: none;
     background-color: rgba(255, 255, 255, 0.85);
     color: var(--synagro-blue);
@@ -197,7 +197,7 @@ body {
     right: 20px;
 }
 
-.carousel-button-pause {
+#pauseBtn {
     display: none !important;
 }
 
