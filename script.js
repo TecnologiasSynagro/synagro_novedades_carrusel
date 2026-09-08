@@ -183,7 +183,7 @@ function togglePause() {
 let autoPlayInterval;
 
 function startAutoPlay() {
-    autoPlayInterval = setInterval(nextSlide, 10000);
+    autoPlayInterval = setInterval(nextSlide, 15000);
 }
 
 function stopAutoPlay() {
