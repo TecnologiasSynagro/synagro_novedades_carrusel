@@ -166,7 +166,7 @@ function attachEventListeners() {
 let autoPlayInterval;
 
 function startAutoPlay() {
-    autoPlayInterval = setInterval(nextSlide, 5000);
+    autoPlayInterval = setInterval(nextSlide, 10000);
 }
 
 function stopAutoPlay() {
