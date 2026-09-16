@@ -18,13 +18,7 @@ body {
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    z-index: 100;
+    display: none;
 }
 
 .header-content {
@@ -54,9 +48,10 @@ body {
 }
 
 .carousel-container {
-    margin-top: 90px;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
