@@ -2,19 +2,19 @@
 const carouselData = [
     {
         id: 1,
-        image: './Nuevo numero Mesa de Ayuda.png',
-        title: '',
+        image: './Placa Actualización SYNAGRO 7-109 - SYNAGRO 7.png',
+        title: 'Actualización SYNAGRO 7.109',
         description: '',
-        buttonText: '',
-        link: '#'
+        buttonText: 'Conocer más',
+        link: './Update SYNagro 7.109.pdf'
     },
     {
         id: 2,
-        image: './Actualizacion App Mobile.png',
-        title: '',
+        image: './Placa Pop Up syn7 - Circuito Ventas Primera Parte.png',
+        title: 'Circuito de Ventas - Primera Parte',
         description: '',
-        buttonText: '',
-        link: '#'
+        buttonText: 'Inscribirse',
+        link: 'https://forms.gle/tBbxssKWxLRjGWQP9'
     }
 ];
 
@@ -39,10 +39,13 @@ function createSlides() {
     slides.forEach((slide, index) => {
         const slideElement = document.createElement('div');
         slideElement.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
+        const button = slide.buttonText
+            ? `<a class="carousel-slide-button" href="${encodeURI(slide.link)}" target="_blank" rel="noopener">${slide.buttonText}</a>`
+            : '';
         slideElement.innerHTML = `
-            <img src="${slide.image}" alt="${slide.title}" loading="lazy">
-            <div class="carousel-slide-overlay">
-                <button class="carousel-slide-button" onclick="navigateToLink('${slide.link}')">${slide.buttonText}</button>
+            <div class="carousel-slide-frame">
+                <img src="${encodeURI(slide.image)}" alt="${slide.title}" loading="lazy">
+                <div class="carousel-slide-overlay">${button}</div>
             </div>
         `;
         slidesContainer.appendChild(slideElement);
