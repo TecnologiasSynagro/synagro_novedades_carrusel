@@ -6,7 +6,7 @@ const carouselData = [
         title: 'Actualización SYNAGRO 7.109',
         description: '',
         buttonText: 'Conocer más',
-        link: './ok_Update_SYNagro_7_109'
+        link: './ok_Update_SYNagro_7_109.pdf'
     },
     {
         id: 2,
